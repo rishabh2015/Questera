@@ -1,0 +1,84 @@
+
+[
+	{
+		"quest":"What's your name?",
+		"options":[
+			{
+				"option": "Name",
+				"selected": false,
+				"value":"a"
+			},
+			{
+				"option": "Raun",
+				"selected": false,
+				"value":"b"
+			}
+
+		],
+		"ans":"a"
+	},
+	{
+		"quest":"Can you lift an elephant with one hand?",
+		"options":[
+			{
+				"option": "Yes, too much easy",
+				"selected": false,
+				"value":"a"
+			},
+			{
+				"option": "Nope, Not possible",
+				"selected": false,
+				"value":"b"
+			}
+		],
+		"ans":"b"
+	},
+	{
+		"quest":"What breaks when you say it?",
+		"options":[
+			{
+				"option": "A Mirror",
+				"selected": false,
+				"value":"a"
+			},
+			{
+				"option": "A Silence",
+				"selected": false,
+				"value":"b"
+			}
+		],
+		"ans":"b"
+	},
+	{
+		"quest":"In Coding world '1'+'1'=?",
+		"options":[
+			{
+				"option": "2",
+				"selected": false,
+				"value":"a"
+			},
+			{
+				"option": "11",
+				"selected": false,
+				"value":"b"
+			}
+		],
+		"ans":"b"
+	},
+	{
+		"quest":"Questerra is tired to make more questions, please mark A for this question!",
+		"options":[
+			{
+				"option": "I'm A",
+				"selected": false,
+				"value":"a"
+			},
+			{
+				"option": "I'm B",
+				"selected": false,
+				"value":"b"
+			}
+		],
+		"ans":"a"
+	}
+]

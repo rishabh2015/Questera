@@ -1,0 +1,44 @@
+<!-- Question Answer directive -->
+
+<div class="qa-container wow fadeInUp" ng-controller="questionsAnswers">
+
+<!-- showing question container -->
+	<div class="questionaire-container">
+
+	<!-- question -->
+		<h3>{{question}}</h3>
+
+		<div class="answer">
+		<form>
+			<ul>
+			
+			<!-- iterate options for the particular question -->
+				<h3 class="options" ng-repeat="(option_num, options) in questList.options">
+
+					<input class="get-option " type="radio" name="{{quest_num}}" id="{{option_num}}-{{quest_num}}" value="{{options.value}}" ng-checked="(questList.options[option_num].selected == true)" >
+       				<label ng-if="quest_num==0" for="{{option_num}}-{{quest_num}}"  ><strong class="text-capitalize">{{options.option}}</strong> </label>
+       				<label ng-if="quest_num!=0" for="{{option_num}}-{{quest_num}}"  ><strong>{{options.option}}</strong> </label>
+       				<div class="check"></div>
+					
+				</h3>
+			
+			</ul>
+			</form>
+		</div>
+		<div class="row">
+
+			<!-- previous question -->
+			<!-- <a ng-if="quest_num>0" href="#/questions/{{quest_num}}" class="btn btn-green btn-done" ng-click=""><i class="fa fa-chevron-left"></i> Q{{quest_num}} &nbsp;</a> -->
+
+			<!-- next question -->
+			<a ng-if="quest_num<4" href="#/questions/{{quest_num+2}}" class="btn btn-green btn-done" ng-click="getAnswer($event)">Q{{quest_num+2}} &nbsp;<i class="fa fa-chevron-right"></i></a>
+
+			<!-- submit responses -->
+			<a ng-if="quest_num>=4" href="#/results/" class="btn btn-green btn-done" ng-click="getAnswer($event)">Submit &nbsp;<i class="fa fa-send"></i></a>
+		</div>
+		
+	<!-- throw error when no option selected -->
+	<div class="show-quest-error"><strong>Seems that you have forgotten to select the option!</strong></div>
+
+	</div>
+</div>
